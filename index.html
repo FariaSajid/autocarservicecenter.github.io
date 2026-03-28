@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Auto Car Service Center</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Auto Car Service Center - Auto electrical service in Dubai. 4.5 ⭐ rating with 33 reviews. Specialists in hybrid and electrical car systems. Open 9AM-5PM.">
+    <meta name="keywords" content="hybrid garage Dubai, auto electrical service, car repair Dubai, Aweer road garage, hybrid car repair">
+    <meta name="author" content="Faria Sajid - Web Developer">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Auto Car Service Center - Auto Electrical Service">
+    <meta property="og:description" content="4.5 ⭐ rated hybrid car service center in Dubai. Specialists in auto electrical repair.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- FLOATING ACTION BUTTONS -->
+    <a href="https://wa.me/971543027978?text=Hello!%20I%20need%20car%20service%20at%20Ayan%20Hybrid%20Garage" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <a href="tel:+971543027978" class="call-float" id="callFloat">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- HEADER with Logo -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Auto Car Service Center Logo" class="logo-img">
+                <div>
+                    <h1>AUTO CAR<span>SERVICE CENTER</span></h1>
+                    <p>Electrical Service Center, Dubai</p>
+                </div>
+            </div>
+            
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Ayan Hybrid Garage Logo" class="hero-logo">
+                <span class="hero-badge">🇦🇪 DUBAI'S TRUSTED HYBRID GARAGE</span>
+                <h2>Expert Auto Electrical<br><span>Service for All Vehicles</span></h2>
+                
+                <!-- Rating Badge -->
+                <div class="rating-badge">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.5 <span>(33 reviews)</span></span>
+                </div>
+                
+                <a href="tel:+971543027978" class="hero-call-btn">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span>Call Us Now</span>
+                        <strong>+971 54 302 7978</strong>
+                    </div>
+                </a>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Cars</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Service</span>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons (like Google Maps) -->
+                <div class="quick-actions">
+                    <a href="#location" class="action-btn">
+                        <i class="fas fa-directions"></i>
+                        <span>Directions</span>
+                    </a>
+                    <a href="#" class="action-btn" id="saveBtn">
+                        <i class="far fa-bookmark"></i>
+                        <span>Save</span>
+                    </a>
+                    <a href="#" class="action-btn" id="shareBtn">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK INFO BAR (like Google Maps info) -->
+        <div class="quick-info">
+            <div class="info-item">
+                <i class="fas fa-map-pin"></i>
+                <span>Aweer Road, Dubai</span>
+            </div>
+             <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Opens at 9AM</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Closes at 5PM</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span style="text-decoration: none;">+971 54 302 7978</span>
+            </div>
+        </div>
+
+        <!-- QUICK CONTACT BAR -->
+        <div class="quick-contact">
+            <a href="tel:+971543027978" class="quick-contact-item">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+            <a href="https://wa.me/971543027978" class="quick-contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="#location" class="quick-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Location</span>
+            </a>
+            <a href="#reviews" class="quick-contact-item">
+                <i class="fas fa-star"></i>
+                <span>Reviews</span>
+            </a>
+        </div>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Specialized in Auto Electrical & Hybrid Systems</p>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 - Auto Electrical -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Auto Electrical</h3>
+                    <p>Complete electrical diagnostics and repair for all vehicles</p>
+                </div>
+                
+                <!-- Service Card 2 - Hybrid Service -->
+                <div class="service-card highlight">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Hybrid System</h3>
+                    <p>Specialized hybrid vehicle maintenance and repair</p>
+                    <span class="service-tag">Expert</span>
+                </div>
+                
+                <!-- Service Card 3 - Battery -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Battery Service</h3>
+                    <p>Battery testing, replacement, and maintenance</p>
+                </div>
+                
+                <!-- Service Card 4 - Diagnostics -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Computer Diagnostics</h3>
+                    <p>Advanced scanning for all car makes and models</p>
+                </div>
+                
+                <!-- Service Card 5 - Alternator -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3>Alternator Repair</h3>
+                    <p>Alternator and starter motor service</p>
+                </div>
+                
+                <!-- Service Card 6 - Wiring -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Wiring & Harness</h3>
+                    <p>Electrical wiring repair and replacement</p>
+                </div>
+            </div>
+        </section>
+
+         <!-- BRANDS WE SERVICE -->
+        <section id="brands" class="brands">
+            <h2 class="section-title">Brands We Service</h2>
+            
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>BMW</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Mercedes</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Audi</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Porsche</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Ferrari</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Lamborghini</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Range Rover</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Lexus</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Toyota</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Nissan</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Mitsubishi</span>
+                </div>
+                <div class="brand-item">
+                    <i class="fas fa-car"></i>
+                    <span>Ford</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="why-us">
+            <h2 class="section-title">Why Dubai Premier Auto?</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Service</h3>
+                    <p>Emergency repairs anytime, day or night</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Certified Mechanics</h3>
+                    <p>Factory-trained luxury car specialists</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Genuine Parts</h3>
+                    <p>100% authentic OEM and quality parts</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Pickup</h3>
+                    <p>Free towing and delivery within Dubai</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Insurance Approved</h3>
+                    <p>Work with all major insurance companies</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free WiFi</h3>
+                    <p>Comfortable waiting lounge with WiFi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section id="reviews" class="reviews">
+            <h2 class="section-title">Customer Reviews</h2>
+            
+            <!-- Rating Summary -->
+            <div class="rating-summary">
+                <div class="rating-large">4.5</div>
+                <div class="rating-stars-large">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="rating-count">Based on 33 reviews</div>
+            </div>
+            
+            <div class="reviews-slider" id="reviewsSlider">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Great service for my hybrid car! Fixed the electrical issue quickly. Very reasonable prices."</p>
+                    <div class="reviewer">
+                        <strong>Mohammed Al Ali</strong>
+                        <span>Toyota Hybrid Owner</span>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best auto electrical garage in Aweer area. They really know what they're doing!"</p>
+                    <div class="reviewer">
+                        <strong>Ahmed Hassan</strong>
+                        <span>Nissan Patrol</span>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-text">"Good service, friendly staff. Took a bit longer than expected but quality work."</p>
+                    <div class="reviewer">
+                        <strong>John Pereira</strong>
+                        <span>Ford Explorer</span>
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Finally found a garage that understands hybrid cars! Highly recommended."</p>
+                    <div class="reviewer">
+                        <strong>Fatima Al Mazroui</strong>
+                        <span>Lexus Hybrid</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="add-review-btn" id="addReviewBtn">
+                <i class="fas fa-pen"></i> Write a Review
+            </button>
+            
+            <div class="review-form" id="reviewForm">
+                <h3>Leave Your Review</h3>
+                <input type="text" placeholder="Your Name" id="reviewerName">
+                <input type="text" placeholder="Your Car Model" id="reviewerCar">
+                <select id="reviewRating">
+                    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                    <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                    <option value="3">⭐⭐⭐ - Good</option>
+                    <option value="2">⭐⭐ - Fair</option>
+                    <option value="1">⭐ - Poor</option>
+                </select>
+                <textarea placeholder="Your Review" id="reviewMessage" rows="3"></textarea>
+                <button class="submit-review" id="submitReview">Submit Review</button>
+            </div>
+        </section>
+
+        <!-- LOCATION SECTION -->
+        <section id="location" class="location">
+            <h2 class="section-title">Location</h2>
+            
+            <div class="location-card">
+                <div class="address-block">
+                    <i class="fas fa-map-pin"></i>
+                    <div>
+                        <h3>Aweer Road</h3>
+                        <p>Dubai - United Arab Emirates</p>
+                        <p class="area-code">58JR+XH Dubai</p>
+                    </div>
+                </div>
+                
+                <div class="location-actions">
+                    <a href="https://maps.google.com/?q=Ayan+Hybrid+Garage+Aweer+Road+Dubai" class="location-action-btn" target="_blank">
+                        <i class="fas fa-directions"></i> Directions
+                    </a>
+                    <a href="#" class="location-action-btn" id="sendToPhone">
+                        <i class="fas fa-mobile-alt"></i> Send to phone
+                    </a>
+                </div>
+                
+                <!-- Map -->
+                <div id="map" style="height: 250px; width: 100%; border-radius: 15px; margin: 1rem 0;"></div>
+                
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Us</h2>
+            
+            <div class="contact-grid">
+                <a href="tel:+971543027978" class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span>Call Now</span>
+                        <strong>+971 54 302 7978</strong>
+                    </div>
+                </a>
+                
+                <a href="https://wa.me/971543027978" class="contact-card whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <span>WhatsApp</span>
+                        <strong>Chat with us</strong>
+                    </div>
+                </a>
+                
+                <a href="#location" class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>Address</span>
+                        <strong>Aweer Road, Dubai</strong>
+                    </div>
+                </a>
+                
+                <a href="#" class="contact-card" id="shareContactBtn">
+                    <i class="fas fa-share-alt"></i>
+                    <div>
+                        <span>Share</span>
+                        <strong>This business</strong>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Quick Quote Form (optional) -->
+            <div class="quote-form">
+                <h3>Send us a message</h3>
+                <form id="quoteForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Car Model">
+                    <select>
+                        <option value="">Select Car Brand</option>
+                        <option>BMW</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                        <option>Porsche</option>
+                        <option>Ferrari</option>
+                        <option>Lamborghini</option>
+                        <option>Range Rover</option>
+                        <option>Other</option>
+                    </select>
+                    <select>
+                        <option value="">Select Service</option>
+                        <option>Oil Change</option>
+                        <option>Engine Repair</option>
+                        <option>AC Service</option>
+                        <option>Body Repair</option>
+                        <option>Computer Diagnostics</option>
+                        <option>Other</option>
+                    </select>
+                    <textarea placeholder="Tell us about the issue" rows="2"></textarea>
+                    <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Ayan Hybrid Garage Logo" class="footer-logo-img">
+                <h3>PK Auto Car Service Center</h3>
+                <p>Auto Electrical Service Center</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-hours">
+                <p><i class="fas fa-clock"></i> Mon-Thu, Sat-Sun: 9AM-5PM</p>
+                <p><i class="fas fa-clock"></i> Friday: Closed</p>
+                <p><i class="fas fa-exclamation-circle"></i> Holiday hours may vary</p>
+            </div>
+            
+            <p class="copyright">
+                © 2026 Auto Car Service Center. All rights reserved.<br>
+                Website by Faria Sajid
+            </p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
